@@ -12,6 +12,7 @@ function App() {
   const [summary, setSummary] = useState("");
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
 
   const handleChange = (e) => {
     setInputText(e.target.value);
@@ -47,6 +48,15 @@ function App() {
     }
   };
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(summary); // Copy the summary to clipboard
+    setIsCopied(true); // Set isCopied to true to show the tooltip
+    setTimeout(() => {
+      setIsCopied(false); // Set isCopied back to false after a few seconds to hide the tooltip
+    }, 3000);
+  };
+
+
   return (
     <Container className="App">
       <h1 className="mt-4 mb-4">Quick Summarizer</h1>
@@ -75,6 +85,8 @@ function App() {
           <CardHeader>Summary</CardHeader>
           <CardBody>
             <p>{summary}</p>
+            <Button onClick={handleCopy}>Copy</Button>
+            {isCopied && <div className="alert alert-success" role="alert">Copied to clipboard!</div>} {/* Show the tooltip when isCopied is true */}
           </CardBody>
         </Card>
       )}
