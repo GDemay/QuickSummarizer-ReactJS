@@ -49,9 +49,9 @@ function App() {
 
   return (
     <Container className="App">
-      <h1 className="mt-4 mb-4">Text Summarizer</h1>
+      <h1 className="mt-4 mb-4">Quick Summarizer</h1>
       <Card className="mb-4">
-        <CardHeader>Text to Summarize</CardHeader>
+        <CardHeader>Quick Summarizer is an advanced AI-powered tool that quickly summarizes your text with high accuracy.</CardHeader>
         <CardBody>
           <Form onSubmit={handleSubmit}>
             <FormGroup className="Input">
