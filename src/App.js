@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Container, Form, Button, FormGroup, Label, Input, Alert, Card, CardBody, CardHeader } from "reactstrap";
 import "./App.css";
+import { Amplify } from 'aws-amplify';
+import awsExports from './aws-exports';
+Amplify.configure(awsExports);
 
 function App() {
   const [inputText, setInputText] = useState("");

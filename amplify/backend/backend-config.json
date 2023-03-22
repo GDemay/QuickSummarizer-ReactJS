@@ -1,0 +1,43 @@
+{
+  "api": {
+    "SummaRapid": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "summarapidreact0686e19e"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "summarapidreact0686e19e": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_summarapidreact0686e19e_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "summarapidreact0686e19e"
+        }
+      ]
+    },
+    "AMPLIFY_function_summarapidreact0686e19e_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "summarapidreact0686e19e"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/items": {
+      "name": "/items",
+      "lambdaFunction": "summarapidreact0686e19e",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

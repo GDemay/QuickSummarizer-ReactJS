@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-summarapidreact-dev-153922-authRole",
+      "UnauthRoleArn": "arn:aws:iam::494100393586:role/amplify-summarapidreact-dev-153922-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::494100393586:role/amplify-summarapidreact-dev-153922-authRole",
+      "Region": "eu-west-3",
+      "DeploymentBucketName": "amplify-summarapidreact-dev-153922-deployment",
+      "UnauthRoleName": "amplify-summarapidreact-dev-153922-unauthRole",
+      "StackName": "amplify-summarapidreact-dev-153922",
+      "StackId": "arn:aws:cloudformation:eu-west-3:494100393586:stack/amplify-summarapidreact-dev-153922/563adb80-c8bf-11ed-b285-0678a61a2e84",
+      "AmplifyAppId": "dzzhtikqd8zcb"
+    },
+    "categories": {
+      "function": {
+        "summarapidreact0686e19e": {
+          "deploymentBucketName": "amplify-summarapidreact-dev-153922-deployment",
+          "s3Key": "amplify-builds/summarapidreact0686e19e-4f6a5a394e4633423178-build.zip"
+        }
+      },
+      "api": {
+        "SummaRapid": {}
+      }
+    }
+  }
+}
