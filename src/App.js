@@ -59,7 +59,9 @@ function App() {
 
   return (
     <Container className="App">
-      <h1 className="mt-4 mb-4">Quick Summarizer</h1>
+<a href="https://www.quicksummarizer.com">
+  <h1 className="mt-4 mb-4">Quick Summarizer</h1>
+      </a>
       <Card className="mb-4">
         <CardHeader>Quick Summarizer is an advanced AI-powered tool that quickly summarizes your text with high accuracy.</CardHeader>
         <CardBody>
