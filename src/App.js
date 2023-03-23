@@ -27,7 +27,8 @@ function App() {
 const handleSubmit = async (e) => {
   e.preventDefault();
 
-  if (!captchaValue) {
+  if (process.env.REACT_APP_ENVIRONMENT !== "local" && !captchaValue) {
+    console.log("ENVIRONMENT: ", process.env.REACT_APP_ENVIRONMENT);
     setError("Please complete the captcha.");
     return;
   }
@@ -43,7 +44,8 @@ const handleSubmit = async (e) => {
     console.log("Request payload: ", inputText);
 
     // Access the correct property from the API response
-    setSummary(response.data["Summarize content"]);
+    setSummary(response.data["summarized_content"]);
+    console.log("Summarized content: ", response);
     setError(null);
   } catch (err) {
     setError("Error: Could not fetch summary." + err);
@@ -83,10 +85,12 @@ return (
               onChange={handleChange}
             />
           </FormGroup>
-          <ReCAPTCHA
-            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-            onChange={handleCaptchaChange}
-          />
+            {process.env.REACT_APP_ENVIRONMENT !== "local" && (
+            <ReCAPTCHA
+              sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+              onChange={handleCaptchaChange}
+            />
+          )}
           <Button color="primary">Summarize</Button>
           {isLoading && <Spinner color="primary" />} {/* Show spinner while isLoading is true */}
         </Form>
