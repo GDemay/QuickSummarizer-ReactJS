@@ -46,7 +46,8 @@ const handleSubmit = async (e) => {
     setSummary(response.data["Summarize content"]);
     setError(null);
   } catch (err) {
-    setError("Error: Could not fetch summary.");
+    setError("Error: Could not fetch summary." + err);
+    console.log(err)
   } finally {
     setIsLoading(false); // Set isLoading back to false after the request is complete
   }
