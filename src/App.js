@@ -61,7 +61,7 @@ function App() {
 
       // Access the correct property from the API response
       setSummary(response.data["summarized_content"]);
-      console.log("Summarized content: ", response);
+      console.log("Summarized content : ", response);
       setError(null);
     } catch (err) {
       setError("Error: Could not fetch summary." + err);
